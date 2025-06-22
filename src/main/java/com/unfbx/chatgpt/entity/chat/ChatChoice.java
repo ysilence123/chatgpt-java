@@ -1,5 +1,6 @@
 package com.unfbx.chatgpt.entity.chat;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @author https:www.unfbx.com
  * @since 2023-03-02
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class ChatChoice implements Serializable {
     private long index;
